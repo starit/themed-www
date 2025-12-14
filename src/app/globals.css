@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface-000 text-text-primary font-sans;
+  }
+
+  ::selection {
+    @apply bg-text-tertiary/30 text-text-primary;
+  }
+
+  /* Typography rhythm */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-normal tracking-tight;
+  }
+
+  /* Focus states */
+  *:focus-visible {
+    @apply outline-none ring-1 ring-text-tertiary ring-offset-2 ring-offset-surface-000;
+  }
+}
+
+@layer components {
+  /* Grid system */
+  .grid-editorial {
+    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-grid;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-section-sm md:py-section;
+  }
+
+  /* Container */
+  .container-main {
+    @apply max-w-container mx-auto px-6 md:px-8;
+  }
+
+  /* Border utilities */
+  .border-subtle {
+    @apply border-surface-300;
+  }
+
+  /* Label styling */
+  .label {
+    @apply text-caption font-mono uppercase tracking-wider text-text-tertiary;
+  }
+
+  /* Card module */
+  .card-module {
+    @apply border border-surface-300 bg-surface-050 p-6;
+  }
+}
+
+@layer utilities {
+  /* Stagger animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Initial hidden state for animations */
+  .animate-initial {
+    opacity: 0;
+  }
+}
+
