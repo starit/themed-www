@@ -66,7 +66,7 @@ const organizationJsonLd = {
   name: 'Themed Labs',
   url: siteUrl,
   description,
-  email: 'research@themedlabs.studio',
+  email: 'support@themed.cc',
 }
 
 export default function RootLayout({
