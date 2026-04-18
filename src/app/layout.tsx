@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
+import { siteUrl } from '@/lib/site'
 import './globals.css'
 
 const plexMono = IBM_Plex_Mono({
@@ -16,14 +17,56 @@ const plexSans = IBM_Plex_Sans({
   display: 'swap',
 })
 
+const description =
+  'Research studio at the intersection of content structure and system design. We connect content creators with mechanism designers—where themes become mechanisms.'
+
 export const metadata: Metadata = {
-  title: 'Themed Labs',
-  description: 'A research studio connecting content creators with mechanism designers. Where themes become mechanisms.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Themed Labs',
+    template: '%s · Themed Labs',
+  },
+  description,
+  keywords: [
+    'Themed Labs',
+    'theme modeling',
+    'mechanism design',
+    'content systems',
+    'systems design',
+    'structured content',
+  ],
+  authors: [{ name: 'Themed Labs', url: siteUrl }],
+  creator: 'Themed Labs',
   openGraph: {
     title: 'Themed Labs',
-    description: 'A research studio connecting content creators with mechanism designers.',
+    description,
+    url: '/',
+    siteName: 'Themed Labs',
+    locale: 'en_US',
     type: 'website',
   },
+  twitter: {
+    card: 'summary',
+    title: 'Themed Labs',
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  category: 'technology',
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Themed Labs',
+  url: siteUrl,
+  description,
+  email: 'research@themedlabs.studio',
 }
 
 export default function RootLayout({
@@ -34,6 +77,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plexMono.variable} ${plexSans.variable}`}>
       <body className="min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
       </body>
     </html>

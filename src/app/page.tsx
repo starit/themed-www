@@ -289,25 +289,57 @@ function Logo({ size = 'default' }: { size?: 'sm' | 'default' }) {
   )
 }
 
+/** Only allow http(s) URLs for user-provided links (blocks javascript:, data:, etc.). */
+function safeExternalHref(raw: string | undefined): string | null {
+  if (!raw?.trim() || raw === '#') return null
+  try {
+    const u = new URL(raw)
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return null
+    return u.href
+  } catch {
+    return null
+  }
+}
+
 // Project Card Component
-function ProjectCard({ 
-  index, 
-  title, 
-  status, 
-  description 
-}: { 
+function ProjectCard({
+  index,
+  title,
+  status,
+  description,
+  link,
+}: {
   index: string
   title: string
   status: string
   description: string
+  link?: string
 }) {
+  const href = safeExternalHref(link)
+  const titleClassName =
+    'text-heading-3 text-text-primary transition-colors decoration-text-tertiary/50 underline-offset-4 hover:text-text-primary hover:decoration-text-secondary'
+
   return (
     <article className="card-module flex flex-col h-full">
       <header className="flex items-start justify-between mb-4">
         <span className="text-caption font-mono text-text-tertiary">{index}</span>
         <StatusBadge status={status} />
       </header>
-      <h3 className="text-heading-3 text-text-primary mb-3">{title}</h3>
+      <h3 className="mb-3 font-normal tracking-tight">
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={titleClassName}
+          >
+            {title}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        ) : (
+          <span className="text-heading-3 text-text-primary">{title}</span>
+        )}
+      </h3>
       <p className="text-small text-text-secondary flex-1">{description}</p>
     </article>
   )
