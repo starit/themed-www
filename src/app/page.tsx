@@ -19,7 +19,7 @@ export default function Home() {
                 </p>
                 
                 <p className="text-body text-text-tertiary max-w-content">
-                  A research studio at the intersection of content structure and system design.
+                  A studio at the intersection of content structure and system design.
                 </p>
               </header>
             </div>
@@ -46,23 +46,23 @@ export default function Home() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <h3 className="text-heading-3 text-text-primary font-mono">Theme Analysis</h3>
+                  <h3 className="text-heading-3 text-text-primary font-mono">Theme Modeling</h3>
                   <p className="text-body text-text-secondary">
-                    Identifying structural patterns in content that can be formalized into repeatable frameworks.
+                    Identifying structural patterns in content and formalizing them into schemas.
                   </p>
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="text-heading-3 text-text-primary font-mono">Mechanism Design</h3>
+                  <h3 className="text-heading-3 text-text-primary font-mono">Mechanism Generation</h3>
                   <p className="text-body text-text-secondary">
                     Translating identified patterns into functional systems, tools, or collaborative protocols.
                   </p>
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="text-heading-3 text-text-primary font-mono">Research Synthesis</h3>
+                  <h3 className="text-heading-3 text-text-primary font-mono">System Deployment</h3>
                   <p className="text-body text-text-secondary">
-                    Documenting processes and outcomes to contribute to the broader understanding of theme-to-mechanism pipelines.
+                    Packaging mechanisms into modular systems that can be launched, iterated, and reused.
                   </p>
                 </div>
                 
@@ -153,23 +153,26 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <ProjectCard
                   index="T-001"
-                  title="Theme Registry"
-                  status="In Progress"
-                  description="A structured catalog of recurring thematic patterns across content domains."
+                  title="Themed.js"
+                  status="Demo"
+                  description="A powerful theme management library with AI-powered theme generation."
+                  link="https://github.com/starit/themed.js"
                 />
                 <ProjectCard
                   index="T-002"
-                  title="Mechanism Primitives"
-                  status="Research"
-                  description="Documenting the atomic units of mechanism design applicable to creative work."
+                  title="Themed Extension"
+                  status="Demo"
+                  description="A Chrome Extension that lets any webpage call an LLM API while keeping the API key completely secure."
+                  link="https://github.com/starit/themed-extension"
                 />
                 <ProjectCard
                   index="T-003"
-                  title="Collaboration Protocol v0.1"
-                  status="Draft"
-                  description="Initial framework for creator-designer collaboration workflows."
+                  title="Themed Arcade"
+                  status="WIP"
+                  description="A platform connecting game content and mechanics."
+                  link="#"
                 />
-                <ProjectCard
+                {/* <ProjectCard
                   index="T-004"
                   title="Pattern Language"
                   status="Planned"
@@ -186,7 +189,7 @@ export default function Home() {
                   title="Open Questions"
                   status="Continuous"
                   description="A living document of unresolved problems in the space."
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -210,10 +213,13 @@ export default function Home() {
                 Themed Labs operates at the boundary between content and systems.
               </p>
               <p className="text-body text-text-secondary">
-                We believe that meaningful themes—the recurring patterns in creative work—can be formalized into mechanisms that amplify their reach and coherence. This is not about automation or optimization. It is about understanding the structures that make content resonate and building systems that preserve and extend those structures.
+                We believe that in the age of AI, structured mechanisms enable more diverse forms of expression—while making content easier to generate, scale, and evolve.
               </p>
               <p className="text-body text-text-secondary">
-                Our work is slow, deliberate, and research-oriented. We are not building for scale. We are building for clarity.
+                We believe that mechanism design and thematic expression require fundamentally different mindsets. By separating them at the system level, we allow creators and designers to focus on what they do best—while enabling them to work together through shared structures.
+              </p>
+              <p className="text-body text-text-secondary">
+                We build systems that connect themes and mechanisms.
               </p>
             </div>
           </div>
