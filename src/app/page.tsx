@@ -254,7 +254,7 @@ export default function Home() {
               <div className="col-span-4 md:col-span-4 lg:col-span-4">
                 <p className="label mb-3">Contact</p>
                 <p className="text-small text-text-secondary">
-                  research@themedlabs.studio
+                  support@themed.cc
                 </p>
               </div>
             </div>

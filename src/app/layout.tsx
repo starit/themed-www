@@ -18,7 +18,7 @@ const plexSans = IBM_Plex_Sans({
 })
 
 const description =
-  'Research studio at the intersection of content structure and system design. We connect content creators with mechanism designers—where themes become mechanisms.'
+  'A studio at the intersection of content structure and system design. We connect content creators with mechanism designers—where themes become mechanisms.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

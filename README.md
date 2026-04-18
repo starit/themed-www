@@ -1,6 +1,6 @@
 # Themed Labs Website
 
-Official website for Themed Labs — a research studio connecting content creators with mechanism designers.
+Official website for Themed Labs — a studio connecting content creators with mechanism designers.
 
 ## Stack
 
