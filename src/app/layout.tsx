@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
 import { siteUrl } from '@/lib/site'
 import './globals.css'
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -82,6 +85,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
+        {gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
       </body>
     </html>
   )
