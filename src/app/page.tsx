@@ -1,3 +1,5 @@
+import { Reveal } from '@/components/Reveal'
+
 export default function Home() {
   return (
     <main>
@@ -7,18 +9,18 @@ export default function Home() {
           <div className="grid-editorial">
             <div className="col-span-4 md:col-span-6 lg:col-span-8">
               <header className="space-y-8">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 motion-safe:animate-slide-up motion-safe:stagger-1 motion-reduce:animate-none">
                   <Logo />
                   <h1 className="text-heading-1 md:text-display text-text-primary">
                     Themed Labs
                   </h1>
                 </div>
-                
-                <p className="text-heading-2 md:text-heading-1 text-text-secondary font-mono">
+
+                <p className="text-heading-2 md:text-heading-1 text-text-secondary font-mono motion-safe:animate-slide-up motion-safe:stagger-2 motion-reduce:animate-none">
                   Where themes become mechanisms.
                 </p>
-                
-                <p className="text-body text-text-tertiary max-w-content">
+
+                <p className="text-body text-text-tertiary max-w-content motion-safe:animate-slide-up motion-safe:stagger-3 motion-reduce:animate-none">
                   A studio at the intersection of content structure and system design.
                 </p>
               </header>
@@ -35,7 +37,8 @@ export default function Home() {
       {/* What We Do Section */}
       <section className="section" id="what-we-do">
         <div className="container-main">
-          <div className="grid-editorial">
+          <Reveal>
+            <div className="grid-editorial">
             <div className="col-span-4 md:col-span-2 lg:col-span-3 mb-6 md:mb-0">
               <span className="label">What We Do</span>
             </div>
@@ -75,6 +78,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -86,7 +90,8 @@ export default function Home() {
       {/* What We Don't Do Section */}
       <section className="section" id="what-we-dont-do">
         <div className="container-main">
-          <div className="grid-editorial">
+          <Reveal>
+            <div className="grid-editorial">
             <div className="col-span-4 md:col-span-2 lg:col-span-3 mb-6 md:mb-0">
               <span className="label">What We Don't Do</span>
             </div>
@@ -134,6 +139,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -145,7 +151,8 @@ export default function Home() {
       {/* Projects Section */}
       <section className="section" id="projects">
         <div className="container-main">
-          <div className="grid-editorial">
+          <Reveal>
+            <div className="grid-editorial">
             <div className="col-span-4 md:col-span-2 lg:col-span-3 mb-6 md:mb-0">
               <span className="label">Projects</span>
             </div>
@@ -193,6 +200,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -204,7 +212,8 @@ export default function Home() {
       {/* About Section */}
       <section className="section" id="about">
         <div className="container-main">
-          <div className="grid-editorial">
+          <Reveal>
+            <div className="grid-editorial">
             <div className="col-span-4 md:col-span-2 lg:col-span-3 mb-6 md:mb-0">
               <span className="label">About</span>
             </div>
@@ -223,13 +232,15 @@ export default function Home() {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-12 mt-section-sm">
         <div className="container-main">
-          <div className="border-t border-surface-300 pt-8">
+          <Reveal>
+            <div className="border-t border-surface-300 pt-8">
             <div className="grid-editorial">
               <div className="col-span-4 md:col-span-4 lg:col-span-4 mb-6 md:mb-0">
                 <div className="flex items-center gap-3">
@@ -264,6 +275,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </footer>
     </main>
